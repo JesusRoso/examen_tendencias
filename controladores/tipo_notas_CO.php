@@ -44,7 +44,7 @@ class tipo_notas_CO
         }
         /*Fin saber se supera número de carácteres*/
 
-        /*Saber si está duplicado el documento*/
+        /*Saber si está duplicado el tipo de nota*/
         $arreglo_tipo_notas=$tipo_notas_MO->seleccionarNombre($tino_nombre);
         if($arreglo_tipo_notas)
         {
@@ -54,7 +54,7 @@ class tipo_notas_CO
             ];
             exit(json_encode($arreglo_respuesta));
         }
-        /*Fin saber si está duplicado el documento*/
+        /*Fin saber si está duplicado el tipo de nota*/
 
         $tipo_notas_MO->agregar($tino_nombre);
 
@@ -75,7 +75,7 @@ class tipo_notas_CO
         
         $tipo_notas_MO=new tipo_notas_MO($conexion);
 
-        /*Saber si el dato estu_id es numérico*/
+        /*Saber si el dato tino_id es numérico*/
         $tino_id=$_POST['tino_id'];
         if(!is_numeric($tino_id))
         {
@@ -86,7 +86,7 @@ class tipo_notas_CO
     
             exit(json_encode($arreglo_respuesta));
         }
-        /*Fin saber si el dato estu_id es numérico*/
+        /*Fin saber si el dato tino_id es numérico*/
 
         /*Saber si los campos están vacíos y manejo de carácteres*/
         $tino_nombre=strtoupper(htmlentities($_POST['tino_nombre'],ENT_QUOTES));
@@ -105,7 +105,7 @@ class tipo_notas_CO
         /*Fin saber si los campos están vacíos y manejo de carácteres*/
 
         
-       /*Saber si está duplicado el documento*/
+       /*Saber si está duplicado el tipo de nota*/
        $arreglo_tipo_notas=$tipo_notas_MO->seleccionarNombre($tino_nombre);
        if($arreglo_tipo_notas)
        {
@@ -115,7 +115,7 @@ class tipo_notas_CO
            ];
            exit(json_encode($arreglo_respuesta));
        }
-       /*Fin saber si está duplicado el documento*/
+       /*Fin saber si está duplicado el tipo de nota*/
 
 
         /*Saber si se supera número de carácteres*/

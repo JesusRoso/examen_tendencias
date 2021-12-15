@@ -46,7 +46,7 @@ class asignaturas_CO
         }
         /*Fin saber se supera número de carácteres*/
 
-        /*Saber si está duplicado el documento*/
+        /*Saber si está duplicado la asignatura*/
         $arreglo_asignaturas=$asignaturas_MO->seleccionarNombreAsignatura($asig_nombre);
         if($arreglo_asignaturas)
         {
@@ -56,7 +56,7 @@ class asignaturas_CO
             ];
             exit(json_encode($arreglo_respuesta));
         }
-        /*Fin saber si está duplicado el documento*/
+        /*Fin saber si está duplicado la asignatura*/
 
         $asignaturas_MO->agregar($asig_nombre,$asig_descripcion);
 
@@ -78,7 +78,7 @@ class asignaturas_CO
         
         $asignaturas_MO=new asignaturas_MO($conexion);
 
-        /*Saber si el dato estu_id es numérico*/
+        /*Saber si el dato asig_id es numérico*/
         $asig_id=$_POST['asig_id'];
         if(!is_numeric($asig_id))
         {
@@ -89,7 +89,7 @@ class asignaturas_CO
     
             exit(json_encode($arreglo_respuesta));
         }
-        /*Fin saber si el dato estu_id es numérico*/
+        /*Fin saber sa la asignatura_id es numérico*/
 
         /*Saber si los campos están vacíos y manejo de carácteres*/
         $asig_nombre=strtoupper(htmlentities($_POST['asig_nombre'],ENT_QUOTES));
@@ -109,9 +109,8 @@ class asignaturas_CO
         /*Fin saber si los campos están vacíos y manejo de carácteres*/
 
 
-        /*Saber si está duplicado el documento*/
+        /*Saber si está duplicada la asignatura*/
         $arreglo_asignaturas=$asignaturas_MO->seleccionarNombreAsignatura($asig_nombre);
-        
         foreach ($arreglo_asignaturas as $objeto_asignatura ) {
             $asig_id_objeto=$objeto_asignatura->asig_id;
         }
@@ -123,8 +122,7 @@ class asignaturas_CO
             ];
             exit(json_encode($arreglo_respuesta));
         }
-        /*Fin saber si está duplicado el documento*/
-    
+        /*Fin saber si está duplicada la asignatura*/
 
         /*Saber si se supera número de carácteres*/
         $size_asig_nombre=strlen($asig_nombre);
@@ -138,7 +136,6 @@ class asignaturas_CO
                     "estado"=>"ERROR",
                     "mensaje"=>"Se excedi&oacute; la cantidad de car&aacute;cteres en el campo de $indices_size_datos"
                 ];
-         
                 exit(json_encode($arreglo_respuesta));
             }
         }

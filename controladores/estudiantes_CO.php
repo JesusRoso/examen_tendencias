@@ -76,7 +76,6 @@ class estudiantes_CO
     function actualizarEstudiantes()
     {
         $conexion=new conexion('all');
-        
         $estudiantes_MO=new estudiantes_MO($conexion);
 
         /*Saber si el dato estu_id es numérico*/
@@ -87,7 +86,6 @@ class estudiantes_CO
                 "estado"=>"ERROR",
                 "mensaje"=>"El identificador no es un n&uacute;mero entero"
             ];
-    
             exit(json_encode($arreglo_respuesta));
         }
         /*Fin saber si el dato estu_id es numérico*/

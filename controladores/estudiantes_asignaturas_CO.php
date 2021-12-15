@@ -98,7 +98,7 @@ class estudiantes_asignaturas_CO
         
         $estudiantes_asignaturas_MO=new estudiantes_asignaturas_MO($conexion);
 
-        /*Saber si el dato estu_id es numérico*/
+        /*Saber si el dato esasig_id es numérico*/
         $esasig_id=$_POST['esasig_id'];
         if(!is_numeric($esasig_id))
         {
@@ -109,7 +109,7 @@ class estudiantes_asignaturas_CO
     
             exit(json_encode($arreglo_respuesta));
         }
-        /*Fin saber si el dato estu_id es numérico*/
+        /*Fin saber si el dato esasig_id es numérico*/
 
         /*Saber si los campos están vacíos y manejo de carácteres*/
         $valor_nota=strtoupper(htmlentities($_POST['valor_nota'],ENT_QUOTES));

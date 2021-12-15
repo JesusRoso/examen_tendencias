@@ -240,8 +240,8 @@ class estudiantes_asignaturas_VI
                         <td style="text-align: center;">
                             <input type="hidden" id="estu_documento_${esasig_id}" value="${estu_documento}">
                             <input type="hidden" id="estu_nombres_${esasig_id}" value="${estu_nombres_selected}">
-                            <input type="hidden" id="asig_nombre_${esasig_id}" value="${asig_nombre_selected}">
-                            <input type="hidden" id="tino_nombre_${esasig_id}" value="${tino_nombre_selected}">
+                            <input type="hidden" id="asig_nombre_${esasig_id}" value="${asig_nombres_selected}">
+                            <input type="hidden" id="tino_nombre_${esasig_id}" value="${tino_nombres_selected}">
                             <input type="hidden" id="valor_nota_${esasig_id}" value="${valor_nota}">
                             
                             <i style="cursor: pointer;" class="fas fa-pen-alt" data-toggle="modal" data-target="#ventana_modal" onclick="verActualizarEstudiantesAsignaturas('${esasig_id}');"></i>
